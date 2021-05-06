@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class SunnyNumber {
+
+   public static boolean isSunny(int number) {
+      if(Math.sqrt(number+1)%1 == 0)
+         return true;
+      else return false;
+   }
+public static void main(String[] args) {
+
+      int number = 0;
+      boolean result = false;
+
+      Scanner scan = new Scanner(System.in);
+
+      System.out.print("Enter an integer number::");
+      number = scan.nextInt();
+
+       result = isSunny(number);
+       if(result)
+          System.out.println(number +
+                  " is a Sunny number.");
+      else
+          System.out.println(number +
+                 " is not a Sunny number.");
+
+      scan.close();
+   }
+}
